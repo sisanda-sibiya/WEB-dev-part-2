@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset> xmlns"https://mellow-sunburst-593a3a.netlify.app"
-    <url><loc>https://brillitlify.app/home.html</loc><priority>1.0</priority></url>
-    <url><loc>https://brilliant-medovik-923a60.netlify.app/about.html</loc><priority>0.8</priority></url>
-    <url><loc>https://brilliant-medovik-923a60.netlify.app/services.html</loc><priority>0.8</priority></url>
-    <url><loc>https://brilliant-medovik-923a60.netlify.app/contact.html</loc><priority>0.9</priority></url>
-    <url><loc>https://brilliant-medovik-923a60.netlify.app/enquiry.html</loc><priority>0.9</priority></url>
+<urlset> xmlns"hhttps://webdevpart3.netlify.app"
+    <url><loc>hhttps://webdevpart3.netlify.app/home.html</loc><priority>1.0</priority></url>
+    <url><loc>https://webdevpart3.netlify.app/about.html</loc><priority>0.8</priority></url>
+    <url><loc>https://webdevpart3.netlify.app/services.html</loc><priority>0.8</priority></url>
+    <url><loc>https://webdevpart3.netlify.app/contact.html</loc><priority>0.9</priority></url>
+    <url><loc>https://webdevpart3.netlify.app/enquiry.html</loc><priority>0.9</priority></url>
 
  </urlset>   

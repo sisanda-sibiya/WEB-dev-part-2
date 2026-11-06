@@ -89,7 +89,7 @@ Estimated Operational Cost: R28,350
 Net Gross Margin: ~54% (R33,400)
 
 Sitemap
-
+```
 Sibiya's Chicken Farming Website
 │
 ├── 1. Home (index.html)
@@ -116,7 +116,7 @@ Sibiya's Chicken Farming Website
 └── 5. Technical SEO (technical.html)
     ├── robots.txt Viewer & Generator
     └── sitemap.xml Previewer
-
+```
 
 Changelog
 
