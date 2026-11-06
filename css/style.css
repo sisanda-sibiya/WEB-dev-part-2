@@ -1,0 +1,442 @@
+/* ===== Sibiya's Chicken Farming - style.css ===== */
+
+:root {
+    --green-dark: #2f5d34;
+    --green: #4a8a50;
+    --amber: #e9a23b;
+    --cream: #fbf6ea;
+    --text: #2b2b2b;
+    --muted: #6b6b6b;
+    --white: #ffffff;
+    --radius: 12px;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ----- Reset & base ----- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+/* ----- Header & navigation ----- */
+.site-header {
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem 0;
+}
+
+.site-header h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 0.5px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.18);
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem;
+}
+
+.site-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a.active {
+    background-color: var(--amber);
+    color: var(--green-dark);
+}
+
+/* ----- Main content ----- */
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+main h2 {
+    color: var(--green-dark);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    margin-top: 0;
+    text-align: center;
+}
+
+main h3 {
+    color: var(--green);
+    margin-bottom: 0.25rem;
+}
+
+main p {
+    margin-top: 0.25rem;
+}
+
+/* Hero image */
+.hero-img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 1.5rem 0;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* Mission & Vision cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border-top: 5px solid var(--amber);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ----- Lists (About page) ----- */
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.commitments {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.commitments li {
+    background-color: var(--white);
+    padding: 1.25rem 1.5rem 1.25rem 3.25rem;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--amber);
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.commitments li:hover {
+    transform: translateX(4px);
+}
+
+.commitments li::before {
+    content: "✔";
+    position: absolute;
+    left: 1.1rem;
+    top: 1.25rem;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.commitments strong {
+    color: var(--green-dark);
+}
+
+/* ----- Contact form ----- */
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin: 0.9rem 0 0.25rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    border: 2px solid #e2dcc8;
+    border-radius: 8px;
+    background-color: var(--cream);
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 1.25rem;
+    padding: 0.8rem 1.6rem;
+    font: inherit;
+    font-weight: 700;
+    color: var(--green-dark);
+    background-color: var(--amber);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+/* ----- Services page ----- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--radius);
+    border-top: 5px solid var(--amber);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+.service-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    background-color: var(--cream);
+    border-radius: 50%;
+}
+
+/* Featured card spans the full width */
+.service-card.featured {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-dark), var(--green));
+}
+
+.service-card.featured h3 {
+    color: var(--amber);
+    margin: 0 0 0.35rem;
+}
+
+.service-card.featured p {
+    color: var(--white);
+}
+
+.service-card.featured .service-icon {
+    flex-shrink: 0;
+    background-color: var(--amber);
+}
+
+/* Call-to-action */
+.cta {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.cta p {
+    margin-bottom: 1rem;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--green-dark);
+    background-color: var(--amber);
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+@media (max-width: 600px) {
+    .service-card.featured {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ----- Enquiry page ----- */
+.form-card {
+    max-width: 700px;
+    margin: 2rem auto 0;
+}
+
+.form-card:hover {
+    transform: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0 1.25rem;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    border: 2px solid #e2dcc8;
+    border-radius: 8px;
+    background-color: var(--cream);
+    transition: border-color 0.2s ease;
+}
+
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--muted);
+}
+
+.form-note a {
+    color: var(--green-dark);
+    font-weight: 600;
+}
+
+/* ----- Form validation ----- */
+.required-note {
+    margin: 0 0 0.25rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* Invalid = red */
+.contact-form input.error,
+.contact-form textarea.error,
+.contact-form select.error {
+    border-color: #c0392b;
+    background-color: #fdf1ef;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+}
+
+/* Valid = green */
+.contact-form input.valid,
+.contact-form textarea.valid,
+.contact-form select.valid {
+    border-color: var(--green);
+    background-color: #eff8f0;
+    box-shadow: 0 0 0 3px rgba(74, 138, 80, 0.15);
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.3rem;
+    color: #c0392b;
+    font-size: 0.85rem;
+}
+
+.char-counter {
+    display: block;
+    margin-top: 0.25rem;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.char-counter.limit {
+    color: #c0392b;
+}
+
+.form-success {
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    color: var(--green-dark);
+    background-color: #e8f3e9;
+    border-left: 5px solid var(--green);
+    border-radius: 8px;
+}
+
+/* ----- Footer ----- */
+.site-footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ----- Small screens ----- */
+@media (max-width: 480px) {
+    .site-nav a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    main {
+        margin: 1.5rem auto;
+    }
+}
